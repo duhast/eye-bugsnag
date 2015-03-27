@@ -24,7 +24,7 @@ Or install it yourself as:
 BugSnag notifier takes the following parameters:
 
 - `api_key` _(required)_
-- `release_stage`,  _(optional, defaults to `development`)_
+- `release_stage`  _(optional, defaults to `development`)_
 - `notify_release_stages`  _(optional, defaults to `%w(development staging production)`)_
 - `app_type` _(optional, defaults to `eye`)_
 - `project_root` _(optional)_
@@ -32,6 +32,8 @@ BugSnag notifier takes the following parameters:
 Declare inside eye config like this:
 
 ```ruby
+require 'eye/notify/bugsnag'
+
 Eye.config do
   bugsnag api_key: '123yourbugsnagapikeygoeshere321', release_stage: ENV['RAILS_ENV'], notify_release_stages: %w(staging production)
   contact :devs, :bugsnag, 'whatever'
