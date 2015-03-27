@@ -1,6 +1,7 @@
 # Eye::Bugsnag
+[![Gem Version](https://badge.fury.io/rb/eye-bugsnag.svg)](http://badge.fury.io/rb/eye-bugsnag)
 
-Sends info about process crashes to BugSnag.
+A notifier plugin for [eye](https://github.com/kostya/eye) to send info about process crashes to BugSnag.
 
 ## Installation
 
@@ -23,11 +24,11 @@ Or install it yourself as:
 
 BugSnag notifier takes the following parameters:
 
-- `api_key` _(required)_
-- `release_stage`  _(optional, defaults to `development`)_
-- `notify_release_stages`  _(optional, defaults to `%w(development staging production)`)_
-- `app_type` _(optional, defaults to `eye`)_
-- `project_root` _(optional)_
+- `api_key` - required
+- `release_stage` - optional, defaults to `development`, but is required to report correctly
+- `notify_release_stages` - optional, defaults to `%w(development staging production)`
+- `app_type` - optional, defaults to `eye`
+- `project_root` - optional
 
 Declare inside eye config like this:
 
